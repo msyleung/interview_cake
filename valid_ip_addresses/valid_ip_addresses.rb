@@ -1,5 +1,9 @@
-# Runtime: 32 ms, faster than 92.31% of Ruby online submissions for Validate IP Address.
-# Memory Usage: 9.4 MB, less than 100.00% of Ruby online submissions for Validate IP Address.
+# I was competing with my friend to complete this exercise :) 
+# He finished the question in Python in faster runtime (24ms) but I got to use less memory in comparison (11.9MB)
+# My Ruby code also made these accomplishments in Leetcode at the time of submission! :tada:
+# => Runtime: 32 ms, faster than 92.31% of Ruby online submissions for Validate IP Address.
+# => Memory Usage: 9.4 MB, less than 100.00% of Ruby online submissions for Validate IP Address.
+# But it took forever to write because I had to review regex again and again. 
 
 def is_ipv4?(ip)
     return false if ip.end_with?('.')
@@ -22,6 +26,9 @@ def is_ipv6?(ip)
     return true
 end
 
+# The highlights: 
+# A clean and simplistic function! 
+
 def valid_ip_address(ip)
     if is_ipv4?(ip)
         return "IPv4"
@@ -30,6 +37,8 @@ def valid_ip_address(ip)
     end
     return "Neither" 
 end
+
+# Also testing
 
 def test(ip, tru_ans)
     if (my_ans = valid_ip_address(ip)) == tru_ans
